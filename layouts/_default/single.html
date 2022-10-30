@@ -1,0 +1,34 @@
+{{ define "title" }}
+  {{ .Title }} - {{ .Site.Title }}
+{{ end }}
+
+{{ define "head" }}
+  {{ partial "katex" . }}
+  {{ partial "firacode" . }}
+  <style>
+    .post-meta * {
+      margin-right: 5px;
+    }
+  </style>
+{{ end }}
+
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+  <div class="post-meta">
+    <time>{{ .Date.Format "2006-01-02 15:04:05" }}</time>
+    {{ if .Site.Params.showsource }}
+      <a href="{{ .Site.Params.contenturl }}{{ .File.Path }}" target="_blank" rel="noopener noreferrer">History</a>
+    {{ end }}
+    {{ range (.GetTerms "tags") }}
+      <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+    {{ end }}
+  </div>
+  {{ partial "toc" . }}
+  <hr>
+  <article>
+    {{ .Content | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" "${1}&nbsp;<a class=\"headline-hash\" href=\"#${2}\" style=\"font-size: large;\">#</a> ${3}" | safeHTML }}
+  </article>
+  {{ if .Params.comments }}
+    {{ partial "comments" . }}
+  {{ end }}
+{{ end }}
