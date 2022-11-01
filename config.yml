@@ -1,0 +1,35 @@
+baseURL: https://minetaro12.github.io/hugo-newcss-theme/
+languageCode: ja-jp
+title: HUGO new.css Theme
+theme: hugo-newcss-theme
+copyright: "&copy; 2022 yourname"
+
+menu:
+  header:
+    - name: Home
+      weight: 1
+      url: /
+
+    - name: Posts
+      weight: 2
+      url: /posts
+
+    - name: Tags
+      weight: 3
+      url: /tags
+
+    - name: MyGithub
+      weight: 4
+      url: https://github.com/
+      params:
+        newtab: true
+
+params:
+  showsource: true
+  contenturl: https://github.com/minetaro12/hugo-newcss-theme/tree/examplesite/content/
+  description: HUGO new.css Theme
+  image: #ogp image
+
+markup:
+  highlight:
+    style: monokai #see h<F6>ttps://xyproto.github.io/splash/docs/all.html

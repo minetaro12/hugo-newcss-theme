@@ -1,0 +1,4 @@
+[submodule "themes/hugo-newcss-theme"]
+	path = themes/hugo-newcss-theme
+	url = https://github.com/minetaro12/hugo-newcss-theme
+	branch = master
