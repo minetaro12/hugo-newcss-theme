@@ -1,6 +1,2 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
-<style>
-  body {
-    font-family: system-ui,sans-serif;
-  }
-</style>
+{{ $CSS := resources.Match "css/*.css" | resources.Concat "css/style.css" | resources.Minify }}
+<link rel="stylesheet" href="{{ $CSS.RelPermalink }}">
