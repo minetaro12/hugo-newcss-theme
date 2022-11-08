@@ -3,12 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
-<style>
-  body {
-    font-family: system-ui,sans-serif;
-  }
-</style>
+    
+<link rel="stylesheet" href="/hugo-newcss-theme/css/style.min.css">
+
     <meta property="og:site_name" content="HUGO new.css Theme" />
 <meta property="og:title" content="Hello" />
 <meta property="og:type" content="website" />
@@ -32,7 +29,46 @@
   });
 </script>
   <style>
-  @import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
+  @font-face {
+    font-family: 'Fira Code';
+    src: url('/font/firacode/woff2/FiraCode-Light.woff2') format('woff2'),
+      url("/font/firacode/woff/FiraCode-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Fira Code';
+    src: url('/font/firacode/woff2/FiraCode-Regular.woff2') format('woff2'),
+      url("/font/firacode/woff/FiraCode-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Fira Code';
+    src: url('/font/firacode/woff2/FiraCode-Medium.woff2') format('woff2'),
+      url("/font/firacode/woff/FiraCode-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Fira Code';
+    src: url('/font/firacode/woff2/FiraCode-SemiBold.woff2') format('woff2'),
+      url("/font/firacode/woff/FiraCode-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Fira Code';
+    src: url('/font/firacode/woff2/FiraCode-Bold.woff2') format('woff2'),
+      url("/font/firacode/woff/FiraCode-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+  }
+  
   code {
     font-family: 'Fira Code', monospace;
   }
