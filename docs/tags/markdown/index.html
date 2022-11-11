@@ -5,7 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 <link rel="stylesheet" href="/hugo-newcss-theme/css/style.min.css">
-
+<style>
+  @font-face {
+    font-family: 'icomoon';
+    src:  url('https://minetaro12.github.io/hugo-newcss-theme/font/icomoon/icomoon.eot?260upn');
+    src:  url('https://minetaro12.github.io/hugo-newcss-theme/font/icomoon/icomoon.eot?260upn#iefix') format('embedded-opentype'),
+      url('https://minetaro12.github.io/hugo-newcss-theme/font/icomoon/icomoon.ttf?260upn') format('truetype'),
+      url('https://minetaro12.github.io/hugo-newcss-theme/font/icomoon/icomoon.woff?260upn') format('woff'),
+      url('https://minetaro12.github.io/hugo-newcss-theme/font/icomoon/icomoon.svg?260upn#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+     
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+     
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-tag:before {
+    content: "\e901";
+  }
+  .icon-calendar:before {
+    content: "\e900";
+  }
+</style>
     <meta property="og:site_name" content="HUGO new.css Theme" />
 <meta property="og:title" content="markdown" />
 <meta property="og:type" content="website" />
@@ -50,10 +84,16 @@
     
   <h2 style="margin-bottom: 2rem;">markdown</h2>
   
+    <ul style="list-style: none; padding: 0;">
     
-      <p><a href="https://minetaro12.github.io/hugo-newcss-theme/posts/markdown-syntax/">Markdown Syntax</a> - 
-      <time>2022-11-01</time></p>
+      <li style="border-bottom: 1px dashed rgb(141, 141, 141);">
+        <a href="https://minetaro12.github.io/hugo-newcss-theme/posts/markdown-syntax/">Markdown Syntax</a>
+        <div>
+          <span class="icon-calendar"></span><time style="font-size: small;">2022-11-01</time>
+        </div>
+      </li>
     
+    </ul>
   
 
     <footer>
