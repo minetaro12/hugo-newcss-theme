@@ -1,5 +1,6 @@
 {{ define "head" }}
   {{ if os.FileExists "content/_index.md" }}
+    {{ partial "firacode" . }}
     {{ partial "katex" . }}
   {{ end }}
 {{ end }}
@@ -10,11 +11,17 @@
       {{ .Content }}
     </article>
   {{ else }}
+    <ul style="list-style: none; padding: 0;">
     {{ range .Site.RegularPages }}
       {{ if in .Permalink "posts" }}
-        <p><a href="{{ .Permalink }}">{{ .Title }}</a> -
-        <time>{{ .Date.Format "2006-01-02" }}</time></p>
+        <li style="border-bottom: 1px dashed rgb(141, 141, 141);">
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+          <div>
+            <span class="icon-calendar"></span><time style="font-size: small;">{{ .Date.Format "2006-01-02" }}</time>
+          </div>
+        </li>
       {{ end }}
     {{ end }}
+    </ul>
   {{ end }}
 {{ end }}

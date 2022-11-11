@@ -7,7 +7,7 @@
   {{ partial "firacode" . }}
   <style>
     .post-meta * {
-      margin-right: 5px;
+      font-size: 0.9rem;
     }
   </style>
 {{ end }}
@@ -15,13 +15,17 @@
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
   <div class="post-meta">
+    <span class="icon-calendar"></span>
     <time>{{ .Date.Format "2006-01-02 15:04:05" }}</time>
     {{ if .Site.Params.showsource }}
       <a href="{{ .Site.Params.contenturl }}{{ .File.Path }}" target="_blank" rel="noopener noreferrer">History</a>
     {{ end }}
-    {{ range (.GetTerms "tags") }}
-      <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
-    {{ end }}
+    <div>
+      <span class="icon-tag"></span>
+      {{ range (.GetTerms "tags") }}
+        <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+      {{ end }}
+    </div>
   </div>
   {{ partial "toc" . }}
   <hr>
