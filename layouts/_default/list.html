@@ -5,25 +5,25 @@
 {{ define "main" }}
   <h2 style="margin-bottom: 2rem;">{{ .Title }}</h2>
   {{ if eq .Title "Tags" }}
-    <ul style="list-style: none; padding: 0;">
+    <ul class="list-post">
       {{ range .Pages.ByTitle }}
-        <li style="border-bottom: 1px dashed rgb(141, 141, 141);">
+        <li class="list-item">
           <span class="icon-tag"></span>
           <a href="{{ .Permalink }}">{{ .Title }}</a>
           <div>
-            <span class="icon-calendar"></span><time style="font-size: small;">{{ .Date.Format "2006-01-02" }}</time>
+            <span class="icon-calendar"></span><time>{{ .Date.Format "2006-01-02" }}</time>
           </div>
         </li>
       {{ end }}
     </ul>
     
   {{ else }}
-    <ul style="list-style: none; padding: 0;">
+    <ul class="list-post">
     {{ range .Pages }}
-      <li style="border-bottom: 1px dashed rgb(141, 141, 141);">
+      <li class="list-item">
         <a href="{{ .Permalink }}">{{ .Title }}</a>
         <div>
-          <span class="icon-calendar"></span><time style="font-size: small;">{{ .Date.Format "2006-01-02" }}</time>
+          <span class="icon-calendar"></span><time>{{ .Date.Format "2006-01-02" }}</time>
         </div>
       </li>
     {{ end }}
