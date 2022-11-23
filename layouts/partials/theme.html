@@ -1,0 +1,46 @@
+<script>
+  const toggle = document.querySelector("#theme-button")
+  const docstyle = document.querySelector(":root")
+
+  const toggleTheme = (theme) => {
+    if(theme == "dark") {
+      docstyle.style.setProperty("--nc-tx-1", "var(--nc-d-tx-1)")
+      docstyle.style.setProperty("--nc-tx-2", "var(--nc-d-tx-2)")
+      docstyle.style.setProperty("--nc-bg-1", "var(--nc-d-bg-1)")
+      docstyle.style.setProperty("--nc-bg-2", "var(--nc-d-bg-2)")
+      docstyle.style.setProperty("--nc-bg-3", "var(--nc-d-bg-3)")
+      docstyle.style.setProperty("--nc-lk-1", "var(--nc-d-lk-1)")
+      docstyle.style.setProperty("--nc-lk-2", "var(--nc-d-lk-2)")
+      docstyle.style.setProperty("--nc-lk-tx", "var(--nc--dlk-tx)")
+      docstyle.style.setProperty("--nc-ac-1", "var(--nc-d-ac-1)")
+      docstyle.style.setProperty("--nc-ac-tx", "var(--nc--dac-tx)")
+      localStorage.setItem("theme", "dark")
+      toggle.innerHTML = '<span class="icon-sun"></span>'
+    } else {
+      docstyle.style.setProperty("--nc-tx-1", "#000000")
+      docstyle.style.setProperty("--nc-tx-2", "#1A1A1A")
+      docstyle.style.setProperty("--nc-bg-1", "#FFFFFF")
+      docstyle.style.setProperty("--nc-bg-2", "#F6F8FA")
+      docstyle.style.setProperty("--nc-bg-3", "#E5E7EB")
+      docstyle.style.setProperty("--nc-lk-1", "#0070F3")
+      docstyle.style.setProperty("--nc-lk-2", "#0366D6")
+      docstyle.style.setProperty("--nc-lk-tx", "#FFFFFF")
+      docstyle.style.setProperty("--nc-ac-1", "#79FFE1")
+      docstyle.style.setProperty("--nc-ac-tx", "#0C4047")
+      localStorage.setItem("theme", "light")
+      toggle.innerHTML = '<span class="icon-moon"></span>'
+    }
+  }
+
+  toggle.addEventListener("click", () => {
+    if(localStorage.getItem("theme") == "dark") {
+      toggleTheme("light")
+    } else {
+      toggleTheme("dark")
+    }
+  })
+
+  if(localStorage.getItem("theme") == "dark") {
+    toggleTheme("dark")
+  }
+</script>

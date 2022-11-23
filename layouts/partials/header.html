@@ -1,4 +1,7 @@
 <h1>{{ .Site.Title }}</h1>
+<button id="theme-button">
+  <span class="icon-moon"></span>
+</button>
 <nav>
   {{ range .Site.Menus.header }}
     {{ if eq .Params.newtab true }}
