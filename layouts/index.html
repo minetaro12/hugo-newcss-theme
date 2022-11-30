@@ -11,17 +11,6 @@
       {{ .Content }}
     </article>
   {{ else }}
-    <ul class="list-post">
-    {{ range .Site.RegularPages }}
-      {{ if in .Permalink "posts" }}
-        <li class="list-item">
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
-          <div>
-            <span class="icon-calendar"></span><time style="font-size: small;">{{ .Date.Format "2006-01-02" }}</time>
-          </div>
-        </li>
-      {{ end }}
-    {{ end }}
-    </ul>
+    {{ partial "index-list" . }}
   {{ end }}
 {{ end }}

@@ -114,7 +114,7 @@ body {
 	/* Center body in page */
 	margin: 0 auto;
 	max-width: 750px;
-	padding: 2rem;
+	padding: 1rem;
 	border-radius: 6px;
 	overflow-x: hidden;
 	word-break: break-word;
@@ -213,7 +213,7 @@ header {
 	
 	/* This sets the right and left margins to cancel out the body's margins. It's width is still the same, but the background stretches across the page's width. */
 
-	margin: -2rem calc(50% - 50vw) 2rem;
+	margin: -1rem calc(50% - 50vw) 1rem;
 
 	/* Shorthand for:
 

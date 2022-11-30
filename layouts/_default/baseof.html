@@ -17,8 +17,10 @@
     <header>
       {{ partial "header" . }}
     </header>
-    {{ block "main" . }}
-    {{ end }}
+    <div class="main-content">
+      {{ block "main" . }}
+      {{ end }}
+    </div>
     <footer>
       {{ partial "footer" . }}
     </footer>

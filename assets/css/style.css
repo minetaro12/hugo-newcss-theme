@@ -1,3 +1,13 @@
+body {
+  display: flex;
+  flex-flow: column;
+  min-height: 92vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
 .list-post {
   padding: 0;
   list-style: none;
@@ -10,6 +20,10 @@
 
 .list-item time {
   font-size: small;
+}
+
+.post-meta {
+  margin-bottom: 0.5rem;
 }
 
 .post-meta * {
