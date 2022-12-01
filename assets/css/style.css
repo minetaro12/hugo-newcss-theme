@@ -33,3 +33,7 @@ body {
 #theme-button {
   float: right;
 }
+
+.footer-text {
+  font-size: small;
+}
