@@ -17,8 +17,10 @@
 
 {{- if .Description }}
   <meta property="og:description" content="{{ .Description }}" />
+  <meta name="description" content="{{ .Description }}">
 {{- else if .Site.Params.description }}
   <meta property="og:description" content="{{ .Site.Params.description }}" />
+  <meta name="description" content="{{ .Site.Params.description }}">
 {{- end }}
 
 <!-- Twitter Card -->
